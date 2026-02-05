@@ -31,7 +31,9 @@ export default function ProductDetailPage() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-3xl sm:text-4xl font-bold text-primary mb-3 sm:mb-4">Product Not Found</h1>
-            <p className="text-neutral-600 mb-6 sm:mb-8 text-sm sm:text-base">The product you're looking for doesn't exist.</p>
+            <p className="text-neutral-600 mb-6 sm:mb-8 text-sm sm:text-base">
+              The product you&apos;re looking for doesn&apos;t exist.
+            </p>
             <Link
               href="/shop"
               className="inline-block bg-primary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-sm font-semibold hover:bg-charcoal transition-colors text-sm sm:text-base"

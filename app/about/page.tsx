@@ -80,9 +80,9 @@ export default function AboutPage() {
         </div>
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 relative z-10">
-          <motion.div
+        <motion.div
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-12 sm:mb-16"
           >
@@ -265,9 +265,9 @@ export default function AboutPage() {
               ></motion.div>
               
               <p className="relative text-sm sm:text-base text-neutral-700 leading-relaxed">
-                Our journey began with a simple question: Why can't everyday basics be extraordinary? We set out to
-                answer that by crafting premium T-shirts that combine exceptional quality, perfect fit, and timeless
-                design. Every piece in our collection is thoughtfully designed to become a staple in your wardrobe.
+                Our journey began with a simple question: Why can&apos;t everyday basics be extraordinary? We set out to
+              answer that by crafting premium T-shirts that combine exceptional quality, perfect fit, and timeless
+              design. Every piece in our collection is thoughtfully designed to become a staple in your wardrobe.
               </p>
             </motion.div>
 
@@ -290,9 +290,9 @@ export default function AboutPage() {
               ></motion.div>
               
               <p className="relative text-sm sm:text-base text-neutral-700 leading-relaxed">
-                We source only the finest organic cotton and work with skilled artisans to ensure every garment meets
-                our exacting standards. Our minimalist approach means no unnecessary details—just pure, refined
-                essentials that speak for themselves.
+              We source only the finest organic cotton and work with skilled artisans to ensure every garment meets
+              our exacting standards. Our minimalist approach means no unnecessary details—just pure, refined
+              essentials that speak for themselves.
               </p>
             </motion.div>
           </motion.div>
@@ -449,13 +449,13 @@ export default function AboutPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto font-light text-white/90"
             >
-              At AREMS, we're not just selling clothes—we're offering a philosophy. A commitment to quality over
+              At AREMS, we&apos;re not just selling clothes—we&apos;re offering a philosophy. A commitment to quality over
               quantity, simplicity over complexity, and timeless style over fleeting trends. Join us in embracing
               the beauty of the essential.
             </motion.p>
-            
+
             {/* Decorative lines */}
-            <motion.div
+          <motion.div
               initial={{ width: 0 }}
               whileInView={{ width: "100%" }}
               viewport={{ once: true }}

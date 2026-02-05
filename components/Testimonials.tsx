@@ -90,7 +90,7 @@ export default function Testimonials() {
 
                 {/* Review Text */}
                 <p className="text-neutral-700 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base md:text-lg font-medium">
-                  "{testimonial.review}"
+                  &quot;{testimonial.review}&quot;
                 </p>
 
                 {/* Divider */}

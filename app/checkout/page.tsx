@@ -326,7 +326,6 @@ export default function CheckoutPage() {
             </div>
           </motion.div>
         )}
-        )}
       </div>
 
       <Footer />
