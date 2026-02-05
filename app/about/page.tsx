@@ -46,37 +46,17 @@ export default function AboutPage() {
 
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        {/* Animated Background Elements */}
+        {/* Soft static background elements (no infinite animations) */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <motion.div
-            animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-20 left-10 w-48 h-48 sm:w-96 sm:h-96 bg-gradient-to-br from-primary/20 to-beige/30 rounded-full blur-3xl"
-          ></motion.div>
-          <motion.div
-            animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.4, 0.2] }}
-            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            className="absolute bottom-20 right-10 w-64 h-64 sm:w-[500px] sm:h-[500px] bg-gradient-to-tr from-beige/40 to-primary/20 rounded-full blur-3xl"
-          ></motion.div>
+          <div className="absolute top-20 left-10 w-48 h-48 sm:w-96 sm:h-96 bg-gradient-to-br from-primary/20 to-beige/30 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-10 w-64 h-64 sm:w-[500px] sm:h-[500px] bg-gradient-to-tr from-beige/40 to-primary/20 rounded-full blur-3xl" />
         </div>
 
-        {/* Floating Geometric Patterns */}
+        {/* Subtle geometric patterns */}
         <div className="absolute inset-0 pointer-events-none opacity-5">
-          <motion.div
-            animate={{ rotate: 360, x: [0, 50, 0], y: [0, -30, 0] }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            className="absolute top-1/4 left-1/4 w-20 h-20 border-2 border-primary rotate-45"
-          ></motion.div>
-          <motion.div
-            animate={{ rotate: -360, scale: [1, 1.2, 1] }}
-            transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-            className="absolute bottom-1/3 right-1/4 w-24 h-24 border-2 border-charcoal rounded-full"
-          ></motion.div>
-          <motion.div
-            animate={{ y: [0, 40, 0], rotate: [0, 180, 0] }}
-            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-1/2 right-1/3 w-16 h-16 bg-gradient-to-br from-beige/30 to-primary/20 rounded-sm"
-          ></motion.div>
+          <div className="absolute top-1/4 left-1/4 w-20 h-20 border-2 border-primary rotate-45" />
+          <div className="absolute bottom-1/3 right-1/4 w-24 h-24 border-2 border-charcoal rounded-full" />
+          <div className="absolute top-1/2 right-1/3 w-16 h-16 bg-gradient-to-br from-beige/30 to-primary/20 rounded-sm" />
         </div>
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 relative z-10">
@@ -87,23 +67,11 @@ export default function AboutPage() {
             className="text-center mb-10 sm:mb-14 md:mb-16"
           >
             <motion.div
-              initial={{ scale: 0.5, opacity: 0 }}
+              initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.2, type: "spring" }}
+              transition={{ duration: 0.4, delay: 0.1 }}
               className="relative inline-block mb-4 sm:mb-6"
             >
-              {/* Rotating ring decoration */}
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0 border-2 border-primary/30 rounded-full scale-125"
-              ></motion.div>
-              <motion.div
-                animate={{ rotate: -360 }}
-                transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0 border-2 border-beige/50 rounded-full scale-150"
-              ></motion.div>
-              
               <div className="relative bg-gradient-to-br from-primary/10 to-beige/20 p-4 sm:p-6 rounded-full inline-flex border-2 border-primary/20 shadow-xl">
                 <ShoppingBag className="w-8 h-8 sm:w-12 sm:h-12 text-primary" />
               </div>

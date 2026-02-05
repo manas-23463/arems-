@@ -10,9 +10,9 @@ export default function Testimonials() {
       {/* Premium Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-neutral-50 via-white to-neutral-100/50" />
       
-      {/* Animated Accent Orbs */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-700" />
+      {/* Soft static accent orbs (no pulse animation) */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl" />
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
@@ -76,15 +76,10 @@ export default function Testimonials() {
                 {/* Rating Stars */}
                 <div className="flex gap-1 mb-5 sm:mb-6 mt-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <motion.div
+                    <Star
                       key={i}
-                      initial={{ opacity: 0, scale: 0 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.15 + i * 0.1 }}
-                    >
-                      <Star className="w-5 h-5 sm:w-6 sm:h-6 fill-yellow-400 text-yellow-400 drop-shadow-sm" />
-                    </motion.div>
+                      className="w-5 h-5 sm:w-6 sm:h-6 fill-yellow-400 text-yellow-400 drop-shadow-sm"
+                    />
                   ))}
                 </div>
 
@@ -130,7 +125,10 @@ export default function Testimonials() {
           </p>
           <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
             {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-6 h-6 sm:w-8 sm:h-8 fill-yellow-400 text-yellow-400 animate-pulse" style={{ animationDelay: `${i * 0.1}s` }} />
+              <Star
+                key={i}
+                className="w-6 h-6 sm:w-8 sm:h-8 fill-yellow-400 text-yellow-400"
+              />
             ))}
           </div>
         </motion.div>

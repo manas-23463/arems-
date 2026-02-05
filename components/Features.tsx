@@ -41,38 +41,16 @@ const features = [
 export default function Features() {
   return (
     <section className="relative py-12 sm:py-16 md:py-24 lg:py-32 bg-gradient-to-b from-white via-neutral-50 to-white overflow-hidden">
-      {/* Animated Background Elements */}
+      {/* Soft static background accents (no continuous animation for better performance) */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <motion.div
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.1, 0.2, 0.1]
-          }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-20 right-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl"
-        ></motion.div>
-        <motion.div
-          animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.1, 0.15, 0.1]
-          }}
-          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-          className="absolute bottom-20 left-20 w-[500px] h-[500px] bg-beige/20 rounded-full blur-3xl"
-        ></motion.div>
+        <div className="absolute top-20 right-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-20 w-[500px] h-[500px] bg-beige/20 rounded-full blur-3xl" />
       </div>
 
-      {/* Decorative Shapes */}
+      {/* Subtle decorative shapes */}
       <div className="absolute inset-0 pointer-events-none opacity-5">
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-          className="absolute top-[20%] left-[10%] w-24 h-24 border-2 border-primary rounded-full"
-        ></motion.div>
-        <motion.div
-          animate={{ rotate: -360 }}
-          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-          className="absolute bottom-[25%] right-[15%] w-32 h-32 border-2 border-charcoal rotate-45"
-        ></motion.div>
+        <div className="absolute top-[20%] left-[10%] w-24 h-24 border-2 border-primary rounded-full" />
+        <div className="absolute bottom-[25%] right-[15%] w-32 h-32 border-2 border-charcoal rotate-45" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -105,78 +83,28 @@ export default function Features() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.4 }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8"
         >
-          {features.map((feature, index) => (
-            <motion.div
+          {features.map((feature) => (
+            <div
               key={feature.title}
-              initial={{ opacity: 0, y: 30, scale: 0.9 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ 
-                duration: 0.6, 
-                delay: index * 0.15,
-                type: "spring",
-                stiffness: 100
-              }}
-              whileHover={{ 
-                scale: 1.05,
-                y: -10,
-                transition: { duration: 0.3 }
-              }}
-              className={`relative text-center p-6 sm:p-8 bg-gradient-to-br ${feature.gradient} backdrop-blur-sm rounded-sm border-2 border-white shadow-xl hover:shadow-2xl transition-all duration-300 group overflow-hidden`}
+              className={`relative text-center p-6 sm:p-8 bg-gradient-to-br ${feature.gradient} backdrop-blur-sm rounded-sm border-2 border-white shadow-md hover:shadow-xl transition-transform duration-200 hover:-translate-y-1`}
             >
               {/* Decorative corner elements */}
-              <div className="absolute top-0 right-0 w-16 h-16 bg-white/20 rounded-bl-full"></div>
-              <div className="absolute bottom-0 left-0 w-16 h-16 bg-white/20 rounded-tr-full"></div>
-              
-              {/* Animated gradient overlay */}
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/10 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-              ></motion.div>
+              <div className="absolute top-0 right-0 w-16 h-16 bg-white/20 rounded-bl-full" />
+              <div className="absolute bottom-0 left-0 w-16 h-16 bg-white/20 rounded-tr-full" />
 
               <div className="relative z-10">
-                <motion.div
-                  whileHover={{ rotate: 360, scale: 1.1 }}
-                  transition={{ duration: 0.6 }}
-                  className="flex justify-center mb-4 sm:mb-5"
-                >
+                <div className="flex justify-center mb-4 sm:mb-5">
                   <div className={`p-4 sm:p-5 ${feature.iconBg} rounded-full shadow-lg border-2 border-white/50`}>
                     <feature.icon className={`w-8 h-8 sm:w-10 sm:h-10 ${feature.iconColor}`} />
                   </div>
-                </motion.div>
+                </div>
                 <h3 className="text-lg sm:text-xl font-bold mb-3 text-primary">{feature.title}</h3>
                 <p className="text-neutral-600 text-sm sm:text-base leading-relaxed">{feature.description}</p>
               </div>
-
-              {/* Shimmer effect */}
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
-                animate={{
-                  x: ["-100%", "100%"]
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  repeatDelay: 2,
-                  ease: "linear"
-                }}
-              ></motion.div>
-
-              {/* Pulsing glow */}
-              <motion.div
-                animate={{
-                  opacity: [0, 0.5, 0]
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-                className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent rounded-sm"
-              ></motion.div>
-            </motion.div>
+            </div>
           ))}
         </motion.div>
       </div>

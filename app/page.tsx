@@ -139,44 +139,11 @@ export default function Home() {
 
       {/* Premium Quality Promise Section */}
       <section className="py-10 sm:py-16 md:py-20 bg-gradient-to-br from-primary via-charcoal to-primary text-white relative overflow-hidden">
-        {/* Animated Background Elements */}
+        {/* Soft static background rings (no infinite animation) */}
         <div className="absolute inset-0 opacity-10">
-          <motion.div
-            animate={{ 
-              rotate: 360,
-              scale: [1, 1.2, 1]
-            }}
-            transition={{ 
-              duration: 20, 
-              repeat: Infinity,
-              ease: "linear"
-            }}
-            className="absolute top-10 left-10 w-40 h-40 border-2 border-white rounded-full"
-          ></motion.div>
-          <motion.div
-            animate={{ 
-              rotate: -360,
-              scale: [1, 1.1, 1]
-            }}
-            transition={{ 
-              duration: 25, 
-              repeat: Infinity,
-              ease: "linear"
-            }}
-            className="absolute bottom-10 right-10 w-60 h-60 border-2 border-white rounded-full"
-          ></motion.div>
-          <motion.div
-            animate={{ 
-              x: [0, 100, 0],
-              y: [0, -50, 0]
-            }}
-            transition={{ 
-              duration: 15, 
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-            className="absolute top-1/2 left-1/4 w-32 h-32 border border-white rounded-sm rotate-45"
-          ></motion.div>
+          <div className="absolute top-10 left-10 w-40 h-40 border-2 border-white rounded-full" />
+          <div className="absolute bottom-10 right-10 w-60 h-60 border-2 border-white rounded-full" />
+          <div className="absolute top-1/2 left-1/4 w-32 h-32 border border-white rounded-sm rotate-45" />
         </div>
 
         {/* Gradient Overlay */}
