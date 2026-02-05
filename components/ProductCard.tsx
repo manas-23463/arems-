@@ -37,7 +37,7 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
       className="group"
     >
       <Link href={`/product/${product.id}`}>
-        <div className="relative overflow-hidden bg-neutral-100 aspect-[3/4] mb-4 rounded-sm">
+        <div className="relative overflow-hidden bg-neutral-100 aspect-[3/4] mb-3 sm:mb-4 rounded-xl shadow-sm group-hover:shadow-lg transition-shadow duration-300">
           <Image
             src={product.images[0]}
             alt={product.name}
@@ -71,9 +71,11 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
             )}
           </button>
         </div>
-        <div>
-          <h3 className="font-semibold text-base sm:text-lg mb-1 text-primary group-hover:underline line-clamp-2">{product.name}</h3>
-          <div className="flex items-center gap-1.5 sm:gap-2 mb-1.5 sm:mb-2">
+        <div className="px-0.5 sm:px-1">
+          <h3 className="font-semibold text-xs sm:text-sm md:text-base mb-0.5 sm:mb-1 text-primary group-hover:underline line-clamp-2">
+            {product.name}
+          </h3>
+          <div className="flex items-center gap-1.5 sm:gap-2 mb-1 sm:mb-2">
             <span className="text-lg sm:text-xl font-bold text-primary">₹{product.price}</span>
             {product.originalPrice && (
               <span className="text-neutral-400 line-through text-xs sm:text-sm">₹{product.originalPrice}</span>

@@ -67,7 +67,7 @@ export default function Home() {
       <Hero />
       
       {/* Color Collection Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-white via-neutral-50 to-white relative">
+      <section className="py-10 sm:py-16 md:py-20 bg-gradient-to-b from-white via-neutral-50 to-white relative">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-beige/20 rounded-full blur-3xl"></div>
@@ -79,14 +79,14 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12 sm:mb-16"
+            className="text-center mb-8 sm:mb-12 md:mb-16"
           >
             <div className="flex items-center justify-center gap-2 mb-4">
               <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
               <span className="text-sm sm:text-base font-semibold text-primary">Our Collection</span>
               <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
             </div>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-primary mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-3 sm:mb-4">
               8 Premium Colors
             </h2>
             <p className="text-base sm:text-lg text-neutral-600 max-w-2xl mx-auto">
@@ -94,7 +94,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4 sm:gap-6 mb-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-3 sm:gap-5 md:gap-6 mb-8 sm:mb-10">
             {collections.map((item, index) => (
               <motion.div
                 key={item.name}
@@ -103,15 +103,15 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05, y: -8 }}
-                className={`relative h-48 sm:h-64 rounded-sm bg-gradient-to-br ${item.gradient} p-6 shadow-lg hover:shadow-2xl transition-all cursor-pointer overflow-hidden group`}
+                className={`relative h-40 sm:h-56 md:h-64 rounded-sm bg-gradient-to-br ${item.gradient} p-4 sm:p-6 shadow-lg hover:shadow-2xl transition-all cursor-pointer overflow-hidden group`}
               >
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
                 <div className="relative h-full flex flex-col justify-end">
                   <div
-                    className="w-12 h-12 sm:w-16 sm:h-16 rounded-full mb-3 border-4 border-white/30 shadow-lg"
+                    className="w-10 h-10 sm:w-14 sm:h-14 rounded-full mb-2 sm:mb-3 border-4 border-white/30 shadow-lg"
                     style={{ backgroundColor: item.color }}
                   ></div>
-                  <h3 className={`font-bold text-base sm:text-lg ${item.textColor}`}>
+                  <h3 className={`font-bold text-sm sm:text-base ${item.textColor}`}>
                     {item.name}
                   </h3>
                 </div>
@@ -138,7 +138,7 @@ export default function Home() {
       </section>
 
       {/* Premium Quality Promise Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-primary via-charcoal to-primary text-white relative overflow-hidden">
+      <section className="py-10 sm:py-16 md:py-20 bg-gradient-to-br from-primary via-charcoal to-primary text-white relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 opacity-10">
           <motion.div
@@ -189,7 +189,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12 sm:mb-16"
+            className="text-center mb-8 sm:mb-12 md:mb-16"
           >
             <motion.div
               initial={{ scale: 0 }}
@@ -201,7 +201,7 @@ export default function Home() {
               <Sparkles className="w-4 h-4" />
               <span className="text-sm font-semibold">The AREMS Difference</span>
             </motion.div>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white via-white to-beige bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-white via-white to-beige bg-clip-text text-transparent">
               Premium Quality Promise
             </h2>
             <p className="text-base sm:text-lg text-white/90 max-w-2xl mx-auto">

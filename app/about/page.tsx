@@ -84,7 +84,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-12 sm:mb-16"
+            className="text-center mb-10 sm:mb-14 md:mb-16"
           >
             <motion.div
               initial={{ scale: 0.5, opacity: 0 }}
@@ -113,7 +113,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary mb-4 sm:mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4 sm:mb-6"
             >
               <span className="bg-gradient-to-r from-primary via-charcoal to-primary bg-clip-text text-transparent">
                 About AREMS
@@ -207,7 +207,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-6 sm:space-y-8"
+            className="space-y-6 sm:space-y-7 md:space-y-8"
           >
             <div className="text-center mb-6 sm:mb-10">
               <motion.div
